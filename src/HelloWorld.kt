@@ -1,10 +1,12 @@
 // top local variable
-val greeting: String = "Hello"
+var greeting: String? = "Hello";
+
+//kotlin allowed you to not use a semicolon (;)
 
 //you can make your variable value into null with ? mark.
 //val height : Number = null -> null can't be a value of a type non-null.
 //val height : Number = 172 -> or you can set the actual value.
-var height : Number? = null
+var height: Number? = null
 
 //kotlin can infered the types of variable
 //var rig = "Dell" //kotlin infered types of a String
@@ -25,7 +27,18 @@ fun main() {
     rig = "Macbook Pro M1"
     rig = null //cause you used ? mark on rig variable, u can set it into null
 
-    println("$greeting, my name is $name i'am $age years old.") //$ sign used to call a variable on string / string literal.
+//    greeting = null
+    if (greeting != null) {
+        println("$greeting, my name is $name i'am $age years old.") //$ sign used to call a variable on string / string literal.
+    } // if else statement
+    else {
+        greeting = "Hi"
+        println("$greeting, my name is $name i'am $age years old.")
+
+    }
+
     println("my height is $height cm")
     println("i hope i can afford $rig in this year")
+
+
 }
