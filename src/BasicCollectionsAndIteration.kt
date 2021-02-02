@@ -11,13 +11,14 @@
 //    //    }
 //
 //    //for each
-////    interestingThings.forEach { s: String -> println(s) } // print each value of array with parameter s lambda / arrow function syntax
+//    interestingThings.forEach { s: String -> println(s) } // print each value of array with parameter s lambda / arrow function syntax
 //    interestingThings.forEachIndexed { index,s  ->
 //        println("$s is at index $index")
 //    } // print each value of array with parameter s lambda / arrow function syntax
 //
 //}
 //
+
 
 //list of
 //fun main() {
@@ -26,9 +27,21 @@
 //}
 
 //map of
-fun main() {
-    val interestingThings = listOf("Dota 2", "Programming", "One Piece")
+//fun main() {
+//    val interestingThings = listOf("Dota 2", "Programming", "One Piece")
+//
+//    val map = mapOf(1 to "a", 2 to "b", 3 to "c")
+//    map.forEach { key, value -> println("$key -> $value") }
+//}
 
-    val map = mapOf(1 to "a", 2 to "b", 3 to "c")
-    map.forEach { key, value -> println("$key -> $value") }
+//by default, collections of kotlin are immutable -> can't get any function to change data after defined.
+//change it into mutable to modify the collection.
+fun main() {
+    val interestingThings = mutableListOf("Dota 2", "Programming", "One Piece")
+    interestingThings.add("Cat") //with mutableListOf you get a function to add value into a collection
+    println(interestingThings)
+
+    val map = mutableMapOf(1 to "a", 2 to "b", 3 to "c") //with mutableMapOf you get a function to add value into a collection
+    map.put(4, "c")
+    println(map)
 }
