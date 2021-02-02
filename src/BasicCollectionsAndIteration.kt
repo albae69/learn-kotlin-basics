@@ -11,5 +11,9 @@ fun main() {
     //    }
 
     //for each
-    interestingThings.forEach { s: String -> println(s) } // print each value of array with parameter s lambda / arrow function syntax
+//    interestingThings.forEach { s: String -> println(s) } // print each value of array with parameter s lambda / arrow function syntax
+    interestingThings.forEachIndexed { index,s  ->
+        println("$s is at index $index")
+    } // print each value of array with parameter s lambda / arrow function syntax
+
 }
