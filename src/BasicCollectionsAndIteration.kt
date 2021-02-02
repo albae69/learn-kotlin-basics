@@ -36,12 +36,21 @@
 
 //by default, collections of kotlin are immutable -> can't get any function to change data after defined.
 //change it into mutable to modify the collection.
+//fun main() {
+//    val interestingThings = mutableListOf("Dota 2", "Programming", "One Piece")
+//    interestingThings.add("Cat") //with mutableListOf you get a function to add value into a collection
+//    println(interestingThings)
+//
+//    val map = mutableMapOf(1 to "a", 2 to "b", 3 to "c") //with mutableMapOf you get a function to add value into a collection
+//    map.put(4, "c")
+//    println(map)
+//}
+
+fun sayHello(greeting: String, itemsToGreeting: List<String>) {
+    itemsToGreeting.forEach { items -> println("$greeting, $items") }
+}
+
 fun main() {
     val interestingThings = mutableListOf("Dota 2", "Programming", "One Piece")
-    interestingThings.add("Cat") //with mutableListOf you get a function to add value into a collection
-    println(interestingThings)
-
-    val map = mutableMapOf(1 to "a", 2 to "b", 3 to "c") //with mutableMapOf you get a function to add value into a collection
-    map.put(4, "c")
-    println(map)
+    sayHello("Hello", interestingThings)
 }
