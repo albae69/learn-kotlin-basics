@@ -27,6 +27,14 @@
 //give a default parameter value
 fun greetPerson(greeting: String = "Hi", name: String = "Bae") = println("$greeting $name")
 
+fun sayHello(greeting: String, vararg itemsToGreet: String) {
+    itemsToGreet.forEach { items ->
+        println("$greeting $items")
+    }
+}
+
+
 fun main() {
-    greetPerson(name="Kotlin")
+    val interestingThings = arrayOf("Kotlin", "Programming", "Cat")
+    sayHello("Hi", itemsToGreet = *interestingThings)
 }
