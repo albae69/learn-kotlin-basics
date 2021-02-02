@@ -20,7 +20,15 @@
 //
 
 //list of
+//fun main() {
+//    val interestingThings = listOf("Dota 2", "Programming", "One Piece")
+//    interestingThings.forEach {it -> println(it)}
+//}
+
+//map of
 fun main() {
     val interestingThings = listOf("Dota 2", "Programming", "One Piece")
-    interestingThings.forEach {it -> println(it)}
+
+    val map = mapOf(1 to "a", 2 to "b", 3 to "c")
+    map.forEach { key, value -> println("$key -> $value") }
 }
