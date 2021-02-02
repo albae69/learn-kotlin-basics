@@ -6,8 +6,10 @@ fun main() {
     println(interestingThings.get(1)) // call individual value of an array with index
 
     // for loops
-    for (interestThing in interestingThings) {
-        println("looping $interestThing")
-    }
+    //    for (interestThing in interestingThings) {
+    //        println("looping $interestThing")
+    //    }
 
+    //for each
+    interestingThings.forEach { s: String -> println(s) } // print each value of array with parameter s lambda / arrow function syntax
 }
